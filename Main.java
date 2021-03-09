@@ -9,8 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-//        System.out.println(DBCustomerController.getCustomerById(DBCustomerController.getConnection()));
-        MyApplication myApplication=new MyApplication();
+        MyApplication myApplication = new MyApplication();
         myApplication.start();
 
     }
