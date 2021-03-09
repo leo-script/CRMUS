@@ -1,5 +1,7 @@
 package com.company.Entities;
 
+import com.company.MyApplication;
+
 public class OrderInformation {
     private String orderId;
     private String customerId;
@@ -24,7 +26,7 @@ public class OrderInformation {
     }
 
     public String getOrderId() {
-        return orderId;
+        return this.orderId;
     }
 
     public void setOrderId(String orderId) {
@@ -32,7 +34,7 @@ public class OrderInformation {
     }
 
     public String getCustomerId() {
-        return customerId;
+        return this.customerId;
     }
 
     public void setCustomerId(String customerId) {
@@ -40,7 +42,7 @@ public class OrderInformation {
     }
 
     public String getOrderStatus() {
-        return orderStatus;
+        return this.orderStatus;
     }
 
     public void setOrderStatus(String orderStatus) {
@@ -48,7 +50,7 @@ public class OrderInformation {
     }
 
     public String getOrderPurchaseTimestamp() {
-        return orderPurchaseTimestamp;
+        return this.orderPurchaseTimestamp;
     }
 
     public void setOrderPurchaseTimestamp(String orderPurchaseTimestamp) {
@@ -56,7 +58,7 @@ public class OrderInformation {
     }
 
     public String getOrderApprovedAt() {
-        return orderApprovedAt;
+        return this.orderApprovedAt;
     }
 
     public void setOrderApprovedAt(String orderApprovedAt) {
@@ -64,7 +66,7 @@ public class OrderInformation {
     }
 
     public String getOrderDeliveredCarrierDate() {
-        return orderDeliveredCarrierDate;
+        return this.orderDeliveredCarrierDate;
     }
 
     public void setOrderDeliveredCarrierDate(String orderDeliveredCarrierDate) {
@@ -72,7 +74,7 @@ public class OrderInformation {
     }
 
     public String getOrderDeliveredCustomerDate() {
-        return orderDeliveredCustomerDate;
+        return this.orderDeliveredCustomerDate;
     }
 
     public void setOrderDeliveredCustomerDate(String orderDeliveredCustomerDate) {
@@ -80,7 +82,7 @@ public class OrderInformation {
     }
 
     public String getOrderEstimatedDeliveryDate() {
-        return orderEstimatedDeliveryDate;
+        return this.orderEstimatedDeliveryDate;
     }
 
     public void setOrderEstimatedDeliveryDate(String orderEstimatedDeliveryDate) {
@@ -89,15 +91,14 @@ public class OrderInformation {
 
     @Override
     public String toString() {
-        return "OrderInformation{" +
-                "orderId='" + orderId + '\'' +
-                ", customerId='" + customerId + '\'' +
-                ", orderStatus='" + orderStatus + '\'' +
-                ", orderPurchaseTimestamp='" + orderPurchaseTimestamp + '\'' +
-                ", orderApprovedAt='" + orderApprovedAt + '\'' +
-                ", orderDeliveredCarrierDate='" + orderDeliveredCarrierDate + '\'' +
-                ", orderDeliveredCustomerDate='" + orderDeliveredCustomerDate + '\'' +
-                ", orderEstimatedDeliveryDate='" + orderEstimatedDeliveryDate + '\'' +
-                '}';
+        return "Order information: " +'\n'+
+                "Order id = '" + MyApplication.ANSI_YELLOW + this.orderId + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Customer id = '" + MyApplication.ANSI_YELLOW + this.customerId + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order status= '" + MyApplication.ANSI_YELLOW + this.orderStatus + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order purchase timestamp = '" + MyApplication.ANSI_YELLOW + this.orderPurchaseTimestamp + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order approved at = '" + MyApplication.ANSI_YELLOW + this.orderApprovedAt + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order delivered carrier date = '" + MyApplication.ANSI_YELLOW + this.orderDeliveredCarrierDate + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order delivered customer date = '" + MyApplication.ANSI_YELLOW + this.orderDeliveredCustomerDate + MyApplication.ANSI_RESET + '\'' +'\n'+
+                "Order estimated delivery date = '" + MyApplication.ANSI_YELLOW + this.orderEstimatedDeliveryDate + MyApplication.ANSI_RESET + '\'' + "\n";
     }
 }

@@ -1,5 +1,7 @@
 package com.company.Entities;
 
+import com.company.MyApplication;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -58,12 +60,12 @@ public class FavouriteCategories {
         this.totalPrice = totalPrice;
     }
 
-    @Override
+   @Override
     public String toString() {
-        return "Product category: " + this.productCategoryName + ", " +
-                "Ordered items: " + this.orderItems + ", " +
-                "Price: " + BigDecimal.valueOf(this.price).setScale(2, RoundingMode.HALF_UP) + ", " +
-                "Freight value: " + BigDecimal.valueOf(this.freightValue).setScale(2, RoundingMode.HALF_UP) + ", " +
-                "TotalPrice: " + BigDecimal.valueOf(this.totalPrice).setScale(2, RoundingMode.HALF_UP) + "\n";
+        return "Product category: " + MyApplication.ANSI_CYAN + this.productCategoryName + MyApplication.ANSI_RESET + ", " +
+                "Ordered items: " + MyApplication.ANSI_CYAN + this.orderItems + MyApplication.ANSI_RESET + ", " +
+                "Price: " + MyApplication.ANSI_CYAN + BigDecimal.valueOf(this.price).setScale(2, RoundingMode.HALF_UP) + MyApplication.ANSI_RESET + ", " +
+                "Freight value: " + MyApplication.ANSI_CYAN + BigDecimal.valueOf(this.freightValue).setScale(2, RoundingMode.HALF_UP) + MyApplication.ANSI_RESET + ", " +
+                "TotalPrice: " + MyApplication.ANSI_CYAN + BigDecimal.valueOf(this.totalPrice).setScale(2, RoundingMode.HALF_UP) + MyApplication.ANSI_RESET + "\n";
     }
 }

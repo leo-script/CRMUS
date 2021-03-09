@@ -1,5 +1,7 @@
 package com.company.Entities;
 
+import com.company.MyApplication;
+
 public class Customer {
     private String customerId;
     private String customerUid;
@@ -8,12 +10,11 @@ public class Customer {
     private String customerState;
 
     public Customer() {
-        customerId=null;
-        customerUid=null;
-        customerZipCode=0000;
-        customerCity=null;
-        customerState=null;
-        //todo: Set default values
+        this.customerId=null;
+        this.customerUid=null;
+        this.customerZipCode=0000;
+        this.customerCity=null;
+        this.customerState=null;
     }
 
     public Customer(String customerId, String customerUid) {
@@ -30,7 +31,7 @@ public class Customer {
     }
 
     public String getCustomerId() {
-        return this.customerId;
+        return customerId;
     }
 
     public void setCustomerId(String customerId) {
@@ -38,7 +39,7 @@ public class Customer {
     }
 
     public String getCustomerUid() {
-        return this.customerUid;
+        return customerUid;
     }
 
     public void setCustomerUid(String customerUid) {
@@ -46,7 +47,7 @@ public class Customer {
     }
 
     public int getCustomerZipCode() {
-        return this.customerZipCode;
+        return customerZipCode;
     }
 
     public void setCustomerZipCode(int customerZipCode) {
@@ -62,19 +63,19 @@ public class Customer {
     }
 
     public String getCustomerState() {
-        return this.customerState;
+        return customerState;
     }
 
     public void setCustomerState(String customerState) {
         this.customerState = customerState;
     }
 
-    @Override
+     @Override
     public String toString() {
-        return "Customer id: '" + customerId + '\'' + "\n" +
-                "Customer uid: " + customerUid +
-                ", Customer zip code: " + customerZipCode +
-                ", Customer city: " + customerCity +
-                ", Customer state: " + customerState;
+        return "Customer id: '" + MyApplication.ANSI_GREEN + this.customerId + MyApplication.ANSI_RESET +'\'' + "\n" +
+                "Customer uid: " + MyApplication.ANSI_GREEN + this.customerUid + MyApplication.ANSI_RESET +
+                ", Customer zip code: " + MyApplication.ANSI_GREEN + this.customerZipCode + MyApplication.ANSI_RESET +
+                ", Customer city: " + MyApplication.ANSI_GREEN + this.customerCity + MyApplication.ANSI_RESET +
+                ", Customer state: " + MyApplication.ANSI_GREEN + this.customerState + MyApplication.ANSI_RESET;
     }
 }
